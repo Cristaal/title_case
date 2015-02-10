@@ -18,4 +18,8 @@ describe('titleCase', function() {
   it("capitalizes the first letter of a title no matter what it is", function() {
     expect(titleCase("a cat in the haT")).to.equal("A Cat in the Hat");
   });
+
+  it("ignores special characters like hyphens and colons", function () {
+    expect(titleCase("crystal contreras-grossman")).to.equal("Crystal Contreras-Grossman");
+  });
 });
